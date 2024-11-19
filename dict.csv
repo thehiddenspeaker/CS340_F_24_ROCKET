@@ -1,3 +1,51 @@
-elements,damageType,attack,id,name,rarity
-"[{'type': 'water', 'damage': 120, 'hidden': False}]",sever,"{'display': 576, 'raw': 120}",57,Aqua Slasher 1,2
-"[{'type': 'fire', 'damage': 330, 'hidden': False}]",sever,"{'display': 864, 'raw': 180}",32,Lava Blaze 2,7
+attack,name,elements,id,damageType,rarity
+"{'display': 912, 'raw': 190}",Hazak Kys,"[{'type': 'dragon', 'damage': 300, 'hidden': False}]",52,sever,7
+"{'display': 210, 'raw': 150}",Jagras Edge 3,[],232,sever,4
+"{'display': 182, 'raw': 130}",Carapace Edge 1,[],241,sever,2
+"{'display': 168, 'raw': 120}",Luminous Daggers 1,[],272,sever,3
+"{'display': 196, 'raw': 140}",Blazing Edge 1,"[{'type': 'fire', 'damage': 150, 'hidden': False}]",247,sever,3
+"{'display': 594, 'raw': 180}",Iron Gospel 2,"[{'type': 'water', 'damage': 180, 'hidden': True}]",96,sever,6
+"{'display': 182, 'raw': 130}",Freeze Daggers 1,"[{'type': 'ice', 'damage': 60, 'hidden': False}]",279,sever,4
+"{'display': 768, 'raw': 160}",Red Wing,"[{'type': 'fire', 'damage': 180, 'hidden': False}]",41,sever,6
+"{'display': 140, 'raw': 100}",Blacksteel Sword 1,"[{'type': 'dragon', 'damage': 120, 'hidden': False}]",257,sever,5
+"{'display': 363, 'raw': 110}",Blacksteel Long Sword 2,"[{'type': 'dragon', 'damage': 150, 'hidden': False}]",163,sever,6
+"{'display': 429, 'raw': 130}",Jyura Shotel 2,"[{'type': 'water', 'damage': 180, 'hidden': False}]",135,sever,3
+"{'display': 672, 'raw': 140}",Aqua Slasher 3,"[{'type': 'water', 'damage': 180, 'hidden': False}]",59,sever,4
+"{'display': 816, 'raw': 170}",Lightning Punisher 2,"[{'type': 'thunder', 'damage': 210, 'hidden': False}]",14,sever,6
+"{'display': 627, 'raw': 190}",Bone Reaper 1,"[{'type': 'sleep', 'damage': 270, 'hidden': True}]",125,sever,6
+"{'display': 210, 'raw': 150}",Sworn Rapiers+,"[{'type': 'water', 'damage': 90, 'hidden': False}]",290,sever,5
+"{'display': 864, 'raw': 180}",Flammenzahn+,"[{'type': 'fire', 'damage': 300, 'hidden': False}]",55,sever,5
+"{'display': 252, 'raw': 180}",Teostra's Spada,"[{'type': 'blast', 'damage': 210, 'hidden': False}]",259,sever,7
+"{'display': 912, 'raw': 190}",Lightning Punisher 3,"[{'type': 'thunder', 'damage': 240, 'hidden': False}]",15,sever,6
+"{'display': 561, 'raw': 170}",Kadachi Fang 2,"[{'type': 'thunder', 'damage': 240, 'hidden': False}]",146,sever,6
+"{'display': 140, 'raw': 100}",Aqua Messer 1,"[{'type': 'water', 'damage': 90, 'hidden': False}]",187,sever,2
+"{'display': 462, 'raw': 140}",Blazing Shotel 1,"[{'type': 'fire', 'damage': 150, 'hidden': False}]",129,sever,3
+"{'display': 210, 'raw': 150}",Lumu Tabar 1,"[{'type': 'blast', 'damage': 270, 'hidden': True}]",203,sever,5
+"{'display': 252, 'raw': 180}",Teostra's Spada,"[{'type': 'blast', 'damage': 210, 'hidden': False}]",259,sever,7
+"{'display': 528, 'raw': 110}",Jagras Blade 1,[],20,sever,2
+"{'display': 912, 'raw': 190}",Rathalos Glinsword,"[{'type': 'fire', 'damage': 240, 'hidden': False}]",43,sever,8
+"{'display': 816, 'raw': 170}",Barroth Shredder 1,"[{'type': 'paralysis', 'damage': 270, 'hidden': True}]",66,sever,5
+"{'display': 627, 'raw': 190}",Nergal Reaver,"[{'type': 'dragon', 'damage': 90, 'hidden': False}]",97,sever,7
+"{'display': 280, 'raw': 200}",Master Bang,"[{'type': 'thunder', 'damage': 330, 'hidden': True}]",186,sever,7
+"{'display': 528, 'raw': 160}",Dazzling Flash 1,"[{'type': 'thunder', 'damage': 240, 'hidden': True}]",101,sever,5
+"{'display': 196, 'raw': 140}",Flame Knife 2,"[{'type': 'fire', 'damage': 120, 'hidden': False}]",181,sever,5
+"{'display': 429, 'raw': 130}",Dark Shotel 2,[],153,sever,4
+"{'display': 720, 'raw': 150}",Frost Blaze 1,"[{'type': 'ice', 'damage': 330, 'hidden': False}]",18,sever,6
+"{'display': 912, 'raw': 190}",Jagras Hacker 3,"[{'type': 'water', 'damage': 300, 'hidden': True}]",25,sever,6
+"{'display': 210, 'raw': 150}",Thunderbolt Sword 1,"[{'type': 'thunder', 'damage': 300, 'hidden': False}]",255,sever,6
+"{'display': 140, 'raw': 100}",Bone Kukri 1,[],217,sever,1
+"{'display': 238, 'raw': 170}",Freeze Chain 1,"[{'type': 'ice', 'damage': 120, 'hidden': False}]",281,sever,6
+"{'display': 224, 'raw': 160}",Thunderbolt Sword 2,"[{'type': 'thunder', 'damage': 360, 'hidden': False}]",256,sever,7
+"{'display': 363, 'raw': 110}",Dragonbone Stabber 2,"[{'type': 'dragon', 'damage': 330, 'hidden': False}]",158,sever,4
+"{'display': 210, 'raw': 150}",Rimespire,"[{'type': 'ice', 'damage': 300, 'hidden': False}]",195,sever,6
+"{'display': 182, 'raw': 130}",Glacial Grace 1,"[{'type': 'ice', 'damage': 210, 'hidden': False}]",193,sever,4
+"{'display': 768, 'raw': 160}",Radobaan Slab 1,"[{'type': 'sleep', 'damage': 210, 'hidden': False}]",71,sever,5
+"{'display': 196, 'raw': 140}",Dragonbone Sword 3,"[{'type': 'dragon', 'damage': 450, 'hidden': False}]",253,sever,6
+"{'display': 672, 'raw': 140}",Malady's Kiss 1,"[{'type': 'paralysis', 'damage': 270, 'hidden': False}]",28,sever,5
+"{'display': 224, 'raw': 160}",Lumu Tabar 2,"[{'type': 'blast', 'damage': 300, 'hidden': True}]",204,sever,6
+"{'display': 210, 'raw': 150}",Sworn Rapiers+,"[{'type': 'water', 'damage': 90, 'hidden': False}]",290,sever,5
+"{'display': 168, 'raw': 120}",Luminous Daggers 1,[],272,sever,3
+"{'display': 768, 'raw': 160}",King Thundersword,"[{'type': 'thunder', 'damage': 540, 'hidden': False}]",79,sever,8
+"{'display': 720, 'raw': 150}",Frost Blaze 1,"[{'type': 'ice', 'damage': 330, 'hidden': False}]",18,sever,6
+"{'display': 672, 'raw': 140}",Flame Blade 1,"[{'type': 'fire', 'damage': 120, 'hidden': False}]",39,sever,4
+"{'display': 672, 'raw': 140}",Jagras Blade 3,[],22,sever,4
