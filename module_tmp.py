@@ -74,7 +74,8 @@ if __name__ == "__main__":
 #
 
 #custom imports
-
+from csv_parent import P1
+from csv_child import C1
 
 #other imports
 from   copy       import deepcopy as dpcpy
@@ -112,6 +113,11 @@ import seaborn as sns
 
 #Function definitions Start Here
 def main():
+    a = C1()
+    headers = a.todict()
+    data = a.toDF("dict.csv", headers)
+    print(headers)
+    print(data)
     pass
 #
 
@@ -123,7 +129,7 @@ def main():
 #%% SELF-RUN                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Main Self-run block
 if __name__ == "__main__":
-    
+
     print(f"\"{module_name}\" module begins.")
     
     #TEST Code
