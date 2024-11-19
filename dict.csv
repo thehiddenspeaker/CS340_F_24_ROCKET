@@ -1,2 +1,3 @@
-elements,attack,id,rarity,damageType,name
-"[{'type': 'water', 'damage': 120, 'hidden': False}]","{'display': 576, 'raw': 120}",57,2,sever,Aqua Slasher 1
+elements,damageType,attack,id,name,rarity
+"[{'type': 'water', 'damage': 120, 'hidden': False}]",sever,"{'display': 576, 'raw': 120}",57,Aqua Slasher 1,2
+"[{'type': 'fire', 'damage': 330, 'hidden': False}]",sever,"{'display': 864, 'raw': 180}",32,Lava Blaze 2,7
