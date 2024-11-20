@@ -14,7 +14,7 @@ Authors:
     morgan montet 
 
 Date Created     :  11/19/2024
-Date Last Updated:  11/19/2024
+Date Last Updated:  11/20/2024
 
 Doc:
     <***>
@@ -34,6 +34,7 @@ import csv
 import requests
 import pandas as pd
 from matplotlib import pyplot as plt
+import seaborn as sns
 
 #%% CONSTANTS                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -125,7 +126,37 @@ class C1(P1):
 
 #end of class
 
-    def scatter_plot(self, datafram, column1, column2):
-        datafram.plot.scatter(column1, column2,)
-        plt.show()
+    def scatter_plot(self, dataframe, column1, column2, user_title):
+        try:
+            dataframe.plot.scatter(column1, column2, title= user_title)
+            plt.show()
+        #
+        except:
+            print('error, make sure the column you gave only have number values.')
+        #
     # end of scatter plot method
+
+    def violin_plot(self, dataframe, column1, column2, user_title):
+        try:
+            sns.violinplot(dataframe, x=column1, y=column2)
+            plt.title(user_title)
+            plt.show()
+        #
+        except:
+            print('error, make sure you gave one string column and one with numbers.')
+        #
+
+    #end of violin plot method
+
+    def whisker_box_plot(self, dataframe, column1, user_title):
+
+        try:
+            dataframe.boxplot(column1)
+            plt.title(user_title)
+            plt.show()
+        #
+        except:
+            print('error, make sure the columns you specified can be made into a box plot.')
+        #
+
+    #end of whisker box plot method
