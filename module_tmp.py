@@ -46,19 +46,21 @@ Unless otherwise required, use the following guidelines
 '''
 
 #%% MODULE BEGINS
-module_name = '<***>'
+module_name = 'main'
 
 '''
-Version: <***>
+Version: 1
 
 Description:
     <***>
 
 Authors:
-    <***>
+    Brennan Kimbrell
+    Trent Law 
+    Morgan Montet
 
-Date Created     :  <***>
-Date Last Updated:  <***>
+Date Created     :  11/19/2024
+Date Last Updated:  11/19/2024
 
 Doc:
     <***>
@@ -70,6 +72,8 @@ Notes:
 #%% IMPORTS                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if __name__ == "__main__":
    import os
+   import pandas as pd
+   import ast
    #os.chdir("./../..")
 #
 
@@ -113,11 +117,23 @@ import seaborn as sns
 
 #Function definitions Start Here
 def main():
-    a = C1()
-    headers = a.todict()
-    data = a.toDF("dict.csv", headers)
+
+    csv_child = C1()
+    csv_parent = P1()
+    headers = csv_child.todict()
+    df = csv_child.toDF("dict.csv", headers)
     print(headers)
-    print(data)
+    print(df)
+
+    user_input = input('Enter a string/number to search: ')
+    search_test = csv_parent.search(user_input)
+
+    #print the list vertical if the list is returned with data in it
+    if search_test:
+        for row in search_test:
+            print(row)
+        #
+    #
     pass
 #
 

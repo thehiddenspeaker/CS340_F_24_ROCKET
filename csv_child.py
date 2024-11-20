@@ -5,7 +5,7 @@ module_name = 'csv_child'
 Version: 1
 
 Description:
-    The parent and child class that read and interpret data from a csv file
+    The child class that read and interpret data from a csv file
 
 Authors:
     Brennan Kimbrell
@@ -25,7 +25,9 @@ Notes:
 #%% IMPORTS                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from csv_parent import P1
 #custom imports
+
 from config import C_headers
+
 #other imports
 import csv
 import requests
@@ -59,7 +61,15 @@ class C1(P1):
     def __init__(self):
 
         print("initialized p1")
+    #
 
     def toDF(self, filename,head):
         self.df = pd.read_csv(filename, header=None, names=head)
         return self.df
+    #
+
+    def search(self, user_input):
+     return 0
+    #end of search method
+
+#end of class
