@@ -126,14 +126,21 @@ def main():
     csv_parent = P1()
     headers = csv_child.todict()
     df = csv_child.toDF("dict.csv", headers)
+
     print(headers)
     print(df)
-    csv_child = C1()
+    #csv_child = C1()
+
+    '''
+    #searh test with child class
     user_input = input('Enter a column name to search in:')
     input_search = input('Enter an integer or string to search for:')
     input_operator = input('Enter an operator to search with(<, =, >, ect):')
+
     print(input_operator)
     print(csv_child.search_dataframe(df, input_search, input_operator, user_input))
+
+    #search test with parent class
     user_input = input('Enter a string/number to search: ')
     search_test = csv_parent.search(user_input)
 
@@ -143,8 +150,13 @@ def main():
             print(row)
         #
     #
+    '''
+    #scatter plot test
+    csv_child.scatter_plot(df, 'attack_display', 'attack_raw')
+
+
     pass
-#
+#end of main
 
 #%% MAIN CODE                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Main code start here

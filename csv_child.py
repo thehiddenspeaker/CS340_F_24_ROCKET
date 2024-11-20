@@ -1,4 +1,5 @@
 #%% MODULE BEGINS
+
 module_name = 'csv_child'
 
 '''
@@ -32,6 +33,7 @@ from config import C_headers
 import csv
 import requests
 import pandas as pd
+from matplotlib import pyplot as plt
 
 #%% CONSTANTS                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -122,3 +124,8 @@ class C1(P1):
     #end of search method
 
 #end of class
+
+    def scatter_plot(self, datafram, column1, column2):
+        datafram.plot.scatter(column1, column2,)
+        plt.show()
+    # end of scatter plot method
