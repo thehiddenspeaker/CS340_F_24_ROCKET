@@ -21,4 +21,4 @@ Doc:
 Notes:
     <***>
 '''
-C_headers = ( 'id','elements', 'elderseal', 'rarity', 'damageType', 'name', 'attack')
+C_headers = ( 'id','elderseal','rarity','damageType','name','attack_display','attack_raw','element_type','element_damage','element_hidden')

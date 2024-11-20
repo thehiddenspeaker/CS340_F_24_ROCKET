@@ -2,7 +2,7 @@
 module_name = 'csv_parent'
 
 '''
-Version: 2
+Version: 3
 
 Description:
     The parent class that read and interpret data from a csv file

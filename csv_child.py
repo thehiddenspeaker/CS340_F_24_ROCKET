@@ -2,7 +2,7 @@
 module_name = 'csv_child'
 
 '''
-Version: 1
+Version: 2
 
 Description:
     The child class that read and interpret data from a csv file
@@ -64,12 +64,61 @@ class C1(P1):
     #
 
     def toDF(self, filename,head):
-        self.df = pd.read_csv(filename, header=None, names=head)
+        self.df = pd.read_csv(filename, header=None, names=head, skiprows= 1)
         return self.df
     #
 
     def search(self, user_input):
+
      return 0
+
+
+    def search_value(self, val, search_term, comparison_operator=None):
+
+        try:
+            search_term = float(search_term)
+            print(search_term)
+        #
+        except ValueError:
+            search_term = str(search_term)
+            print(search_term)
+        #
+
+        if isinstance(val, str):
+            return search_term.lower() in val.lower()
+
+
+        # If the value is numeric (int or float), perform >, < or exact comparisons
+        if isinstance(val, (int, float)):
+            if comparison_operator == '>':
+                return val > search_term
+            elif comparison_operator == '<':
+                return val < search_term
+            else:
+                return val == search_term  # Default is exact match
+        return False
+
+
+    # Function to search and display the DataFrame
+    def search_dataframe(self, df, search_term, comparison_operator=None, column=None):
+        if column:
+            # Filter the DataFrame to the selected column (which will be a Series)
+            filtered_column = df[column]
+
+            # Create the boolean mask using apply
+            boolean_mask = filtered_column.apply(lambda x: self.search_value(x, search_term, comparison_operator))
+
+            # Apply boolean indexing to filter rows where the column matches the condition
+            filtered_rows = df[boolean_mask]  # Boolean indexing to filter rows
+        else:
+            # Create the boolean mask using applymap for the entire DataFrame
+            boolean_mask = df.applymap(lambda x: self.search_value(x, search_term, comparison_operator))
+
+            # Apply boolean indexing using .any(axis=1) to filter rows where any column matches the condition
+            filtered_rows = df[boolean_mask.any(axis=1)]  # Boolean indexing for any match in a row
+        print(":", boolean_mask)
+        return filtered_rows
+
     #end of search method
 
 #end of class

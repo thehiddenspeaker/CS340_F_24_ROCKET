@@ -49,7 +49,7 @@ Unless otherwise required, use the following guidelines
 module_name = 'main'
 
 '''
-Version: 1
+Version: 2
 
 Description:
     <***>
@@ -83,13 +83,14 @@ from csv_child import C1
 
 #other imports
 from   copy       import deepcopy as dpcpy
-
+import pandas as pd
+import numpy  as np
 '''
 from   matplotlib import pyplot as plt
 import mne
-import numpy  as np 
+
 import os
-import pandas as pd
+
 import seaborn as sns
 '''
 #%% USER INTERFACE              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -99,7 +100,10 @@ import seaborn as sns
 
 
 #%% CONFIGURATION               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', None)
+pd.set_option('display.max_colwidth', None)
 
 
 #%% INITIALIZATIONS             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -124,7 +128,12 @@ def main():
     df = csv_child.toDF("dict.csv", headers)
     print(headers)
     print(df)
-
+    csv_child = C1()
+    user_input = input('Enter a column name to search in:')
+    input_search = input('Enter an integer or string to search for:')
+    input_operator = input('Enter an operator to search with(<, =, >, ect):')
+    print(input_operator)
+    print(csv_child.search_dataframe(df, input_search, input_operator, user_input))
     user_input = input('Enter a string/number to search: ')
     search_test = csv_parent.search(user_input)
 
