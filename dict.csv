@@ -1,51 +1,50 @@
-id,elements,elderseal,rarity,damageType,name,attack
-166,"[{'type': 'dragon', 'damage': 180, 'hidden': False}]",low,8,sever,Xeno Cypher,"{'display': 594, 'raw': 180}"
-1009,[],,5,projectile,Water Cannon 1,"{'display': 225, 'raw': 150}"
-131,"[{'type': 'fire', 'damage': 270, 'hidden': False}]",,5,sever,Anja Scimitar 1,"{'display': 594, 'raw': 180}"
-1212,"[{'type': 'blast', 'damage': 240, 'hidden': False}]",,8,sever,"Empress Lance ""Styx""","{'display': 414, 'raw': 180}"
-229,"[{'type': 'sleep', 'damage': 210, 'hidden': False}]",,6,sever,Baan Claw 3,"{'display': 266, 'raw': 190}"
-942,[],,6,projectile,Lightning Blitz 2,"{'display': 221, 'raw': 170}"
-993,[],,8,projectile,Xeno Neqiina,"{'display': 234, 'raw': 180}"
-744,"[{'type': 'fire', 'damage': 300, 'hidden': False}]",,7,sever,Gnashing Flammenbeil,"{'display': 735, 'raw': 210}"
-660,"[{'type': 'paralysis', 'damage': 330, 'hidden': True}]",,6,sever,Barroth Blaster 2,"{'display': 437, 'raw': 190}"
-1155,"[{'type': 'dragon', 'damage': 210, 'hidden': False}]",high,7,sever,Fatal Bite,"{'display': 308, 'raw': 220}"
-298,"[{'type': 'blast', 'damage': 150, 'hidden': True}]",,6,sever,Strong Hatchets 1,"{'display': 238, 'raw': 170}"
-363,"[{'type': 'water', 'damage': 240, 'hidden': False}]",,6,blunt,Water Basher 3,"{'display': 936, 'raw': 180}"
-1255,[],,6,projectile,Rage Gold Cannon,"{'display': 255, 'raw': 170}"
-561,"[{'type': 'dragon', 'damage': 270, 'hidden': False}]",average,8,sever,Love's Sorrow,"{'display': 460, 'raw': 200}"
-1019,[],,8,projectile,Legia Shattercryst,"{'display': 255, 'raw': 170}"
-541,"[{'type': 'poison', 'damage': 240, 'hidden': False}]",,2,sever,Blooming Lance 1,"{'display': 230, 'raw': 100}"
-393,"[{'type': 'sleep', 'damage': 270, 'hidden': False}]",,6,blunt,Baan Strike 3,"{'display': 988, 'raw': 190}"
-469,"[{'type': 'ice', 'damage': 180, 'hidden': True}]",,5,,Hard Bone Horn 3,"{'display': 672, 'raw': 160}"
-370,"[{'type': 'poison', 'damage': 360, 'hidden': False}]",,3,blunt,Blooming Hammer 2,"{'display': 624, 'raw': 120}"
-1074,[],,8,projectile,Xeno Jiiqa,"{'display': 255, 'raw': 170}"
-133,"[{'type': 'fire', 'damage': 390, 'hidden': False}]",,6,sever,Anja Scimitar 3,"{'display': 693, 'raw': 210}"
-92,[],,3,sever,Iron Grace 1,"{'display': 363, 'raw': 110}"
-382,[],,3,blunt,Fossil Bludgeon 1,"{'display': 728, 'raw': 140}"
-884,"[{'type': 'water', 'damage': 150, 'hidden': False}]",,5,sever,Water Glaive 1,"{'display': 465, 'raw': 150}"
-189,"[{'type': 'water', 'damage': 150, 'hidden': False}]",,4,sever,Aqua Messer 3,"{'display': 196, 'raw': 140}"
-1279,[],,8,projectile,"Kjarr Assault ""Water""","{'display': 285, 'raw': 190}"
-530,[],,4,sever,Kulu Lance 3,"{'display': 299, 'raw': 130}"
-302,"[{'type': 'fire', 'damage': 150, 'hidden': False}]",,5,sever,Anja Cyclone 1,"{'display': 238, 'raw': 170}"
-,,,,,,
-104,[],,2,sever,First Dance 1,"{'display': 330, 'raw': 100}"
-926,[],,6,projectile,Lumu Typhon 3,"{'display': 221, 'raw': 170}"
-1159,"[{'type': 'dragon', 'damage': 210, 'hidden': False}]",high,7,blunt,Devil's Crush,"{'display': 1196, 'raw': 230}"
-682,"[{'type': 'poison', 'damage': 300, 'hidden': True}]",,5,sever,Improved Steel Axe 3,"{'display': 490, 'raw': 140}"
-259,"[{'type': 'blast', 'damage': 210, 'hidden': False}]",,7,sever,Teostra's Spada,"{'display': 252, 'raw': 180}"
-210,"[{'type': 'poison', 'damage': 360, 'hidden': False}]",,6,sever,Datura Blossom 2,"{'display': 224, 'raw': 160}"
-1016,[],,6,projectile,Arma Destroyer 3,"{'display': 255, 'raw': 170}"
-171,[],,1,sever,Hunter's Knife 2,"{'display': 126, 'raw': 90}"
-1094,"[{'type': 'dragon', 'damage': 180, 'hidden': True}]",low,5,projectile,Princess Arrow 2,"{'display': 192, 'raw': 160}"
-1031,[],,1,projectile,Bone Shooter 2,"{'display': 165, 'raw': 110}"
-314,"[{'type': 'water', 'damage': 210, 'hidden': False}]",,6,sever,Jyura Hatchets 3,"{'display': 266, 'raw': 190}"
-479,"[{'type': 'poison', 'damage': 240, 'hidden': False}]",,2,blunt,Blooming Horn 1,"{'display': 504, 'raw': 120}"
-69,"[{'type': 'sleep', 'damage': 150, 'hidden': False}]",,3,sever,Spiked Blade 1,"{'display': 624, 'raw': 130}"
-502,"[{'type': 'sleep', 'damage': 270, 'hidden': False}]",,6,blunt,Baan Horn 3,"{'display': 798, 'raw': 190}"
-1236,[],,8,projectile,"Empress Shell ""Ruin""","{'display': 260, 'raw': 200}"
-420,"[{'type': 'blast', 'damage': 330, 'hidden': False}]",,5,blunt,Magda Floga,"{'display': 832, 'raw': 160}"
-207,"[{'type': 'poison', 'damage': 240, 'hidden': False}]",,3,sever,Blooming Knife 2,"{'display': 182, 'raw': 130}"
-1034,[],,4,projectile,Heavy Shooter 2,"{'display': 225, 'raw': 150}"
-1042,[],,8,projectile,Griffon Blazooka,"{'display': 330, 'raw': 220}"
-1,[],,1,sever,Buster Sword 1,"{'display': 384, 'raw': 80}"
-954,[],,6,projectile,Sniper Shot 1,"{'display': 221, 'raw': 170}"
+id,elderseal,rarity,damageType,name,attack_display,attack_raw,element_type,element_damage,element_hidden
+166,low,8,sever,Xeno Cypher,594,180,dragon,180,False
+1009,,5,projectile,Water Cannon 1,225,150,,0,
+131,,5,sever,Anja Scimitar 1,594,180,fire,270,False
+1212,,8,sever,"Empress Lance ""Styx""",414,180,blast,240,False
+229,,6,sever,Baan Claw 3,266,190,sleep,210,False
+942,,6,projectile,Lightning Blitz 2,221,170,,0,
+993,,8,projectile,Xeno Neqiina,234,180,,0,
+744,,7,sever,Gnashing Flammenbeil,735,210,fire,300,False
+660,,6,sever,Barroth Blaster 2,437,190,paralysis,330,True
+1155,high,7,sever,Fatal Bite,308,220,dragon,210,False
+298,,6,sever,Strong Hatchets 1,238,170,blast,150,True
+363,,6,blunt,Water Basher 3,936,180,water,240,False
+1255,,6,projectile,Rage Gold Cannon,255,170,,0,
+561,average,8,sever,Love's Sorrow,460,200,dragon,270,False
+1019,,8,projectile,Legia Shattercryst,255,170,,0,
+541,,2,sever,Blooming Lance 1,230,100,poison,240,False
+393,,6,blunt,Baan Strike 3,988,190,sleep,270,False
+469,,5,,Hard Bone Horn 3,672,160,ice,180,True
+370,,3,blunt,Blooming Hammer 2,624,120,poison,360,False
+1074,,8,projectile,Xeno Jiiqa,255,170,,0,
+133,,6,sever,Anja Scimitar 3,693,210,fire,390,False
+92,,3,sever,Iron Grace 1,363,110,,0,
+382,,3,blunt,Fossil Bludgeon 1,728,140,,0,
+884,,5,sever,Water Glaive 1,465,150,water,150,False
+189,,4,sever,Aqua Messer 3,196,140,water,150,False
+1279,,8,projectile,"Kjarr Assault ""Water""",285,190,,0,
+530,,4,sever,Kulu Lance 3,299,130,,0,
+302,,5,sever,Anja Cyclone 1,238,170,fire,150,False
+104,,2,sever,First Dance 1,330,100,,0,
+926,,6,projectile,Lumu Typhon 3,221,170,,0,
+1159,high,7,blunt,Devil's Crush,1196,230,dragon,210,False
+682,,5,sever,Improved Steel Axe 3,490,140,poison,300,True
+259,,7,sever,Teostra's Spada,252,180,blast,210,False
+210,,6,sever,Datura Blossom 2,224,160,poison,360,False
+1016,,6,projectile,Arma Destroyer 3,255,170,,0,
+171,,1,sever,Hunter's Knife 2,126,90,,0,
+1094,low,5,projectile,Princess Arrow 2,192,160,dragon,180,True
+1031,,1,projectile,Bone Shooter 2,165,110,,0,
+314,,6,sever,Jyura Hatchets 3,266,190,water,210,False
+479,,2,blunt,Blooming Horn 1,504,120,poison,240,False
+69,,3,sever,Spiked Blade 1,624,130,sleep,150,False
+502,,6,blunt,Baan Horn 3,798,190,sleep,270,False
+1236,,8,projectile,"Empress Shell ""Ruin""",260,200,,0,
+420,,5,blunt,Magda Floga,832,160,blast,330,False
+207,,3,sever,Blooming Knife 2,182,130,poison,240,False
+1034,,4,projectile,Heavy Shooter 2,225,150,,0,
+1042,,8,projectile,Griffon Blazooka,330,220,,0,
+1,,1,sever,Buster Sword 1,384,80,,0,
+954,,6,projectile,Sniper Shot 1,221,170,,0,
