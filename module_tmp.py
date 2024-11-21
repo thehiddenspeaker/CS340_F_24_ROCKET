@@ -146,7 +146,6 @@ def main():
     #search test with parent class
     user_input = input('Enter a string/number to search: ')
     search_test = csv_parent.search(user_input)
-    print(search_test)
     #print the list vertical if the list is returned with data in it
     if search_test:
         for row in search_test:
