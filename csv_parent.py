@@ -33,6 +33,7 @@ import csv
 import sys
 import requests
 import pandas as pd
+from matplotlib import pyplot as plt
 
 #%% CONSTANTS                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -89,6 +90,38 @@ class P1:
 
         # Return the list of matching rows (empty if none found)
         return matching_rows
+
+    def histogram_plot(self, dataframe, column1, bin_number, user_title):
+        try:
+            dataframe.hist(column1,bins=int(bin_number), edgecolor='black')
+            plt.title(user_title)
+            plt.xlabel(column1)
+            plt.ylabel('Frequency')
+            plt.tight_layout()
+            plt.show()
+        #
+        except:
+            print('error, make sure the columns you specified can be made into a histogram.')
+
+    #end of histogram plot
+
+    def line_plot(self, dataframe, column1, user_title):
+        try:
+            # Create a line plot for the specified column
+            dataframe[column1].plot(kind='line', figsize=(10, 6))
+
+            # Adding title and labels
+            plt.title(user_title)
+            plt.xlabel('Index')
+            plt.ylabel(column1)  # Y-axis will be the values from the column
+
+            # Show the plot
+            plt.show()
+        except:
+            print('error, make sure the columns you specified can be made into a line plot.')
+
+    #end of line plot
+
 #end of class
 
 

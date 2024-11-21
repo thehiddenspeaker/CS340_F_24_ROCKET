@@ -131,7 +131,7 @@ def main():
     print(headers)
     print(df)
 
-
+    
     #searh test with child class
     user_input = input('Enter a column name to search in:')
     input_search = input('Enter an integer or string to search for:')
@@ -157,7 +157,7 @@ def main():
     user_input_title = input('please input the title of your graph: ')
     
     csv_child.scatter_plot(df, user_input_column1, user_input_column2, user_input_title)
-    
+
     #violen plot test
     user_input_column1 = input('please input the column you want x to be: ')
     user_input_column2 = input('please input the column you want y to be: ')
@@ -166,7 +166,7 @@ def main():
     csv_child.violin_plot(df, user_input_column1, user_input_column2, user_input_title)
 
 
-    #whisker box plot
+    #whisker box plot test
     user_input = input('Enter the column names (comma-separated): ')
 
     # turns users input into a list
@@ -175,6 +175,20 @@ def main():
     user_input_title = input('please input the title of your graph: ')
 
     csv_child.whisker_box_plot(df, columns_list, user_input_title)
+    
+    #histogram plot test
+    user_input_column1 = input('please input the column you want x to be: ')
+    user_input_bin = input('please input the amount of bins that graph should have: ')
+    user_input_title = input('please input the title of your graph: ')
+
+    csv_parent.histogram_plot(df, user_input_column1, user_input_bin, user_input_title)
+
+
+    #line plot test
+    user_input_column1 = input('please input the column you want x to be: ')
+    user_input_title = input('please input the title of your graph: ')
+
+    csv_parent.line_plot(df, user_input_column1, user_input_title)
 
     pass
 #end of main
