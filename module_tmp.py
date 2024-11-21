@@ -135,7 +135,7 @@ def main():
     print(df)
 
     
-    #searh test with child class
+    searh test with child class
     user_input = input('Enter a column name to search in:')
     input_search = input('Enter an integer or string to search for:')
     input_operator = input('Enter an operator to search with(<, =, >, ect):')
