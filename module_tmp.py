@@ -129,12 +129,10 @@ def main():
     #retriving headers through parent for config
     headers = csv_child.todict()
     #create data frame
-    df = csv_child.toDF("dict.csv", headers)
+    df = csv_child.toDF("data/dict.csv", headers)
     #print data
     print(headers)
     print(df)
-
-    
     #searh test with child class
     user_input = input('Enter a column name to search in:')
     input_search = input('Enter an integer or string to search for:')
