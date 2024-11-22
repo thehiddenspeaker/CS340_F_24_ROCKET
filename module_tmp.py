@@ -80,8 +80,8 @@ if __name__ == "__main__":
 #
 
 #custom imports
-from csv_parent import P1
-from csv_child import C1
+from csv_inherit import P1
+from csv_interact import C1
 
 #other imports
 from   copy       import deepcopy as dpcpy

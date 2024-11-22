@@ -1,6 +1,6 @@
 #%% MODULE BEGINS
 
-module_name = 'csv_child'
+module_name = 'csv_interact'
 
 '''
 Version: 2
@@ -24,7 +24,7 @@ Notes:
 '''
 
 #%% IMPORTS                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from csv_parent import P1
+from csv_inherit import P1
 #custom imports
 
 from config import C_headers

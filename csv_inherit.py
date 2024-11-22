@@ -1,5 +1,5 @@
 #%% MODULE BEGINS
-module_name = 'csv_parent'
+module_name = 'csv_inherit'
 
 '''
 Version: 3
