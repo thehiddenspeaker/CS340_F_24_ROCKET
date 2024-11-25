@@ -44,7 +44,7 @@ Unless otherwise required, use the following guidelines
 
 
 '''
-from matplotlib.pyplot import violinplot
+
 
 #%% MODULE BEGINS
 module_name = 'main'
@@ -75,6 +75,7 @@ if __name__ == "__main__":
    import os
    import pandas as pd
    import ast
+   from matplotlib.pyplot import violinplot
    #os.chdir("./../..")
 #
 
@@ -122,12 +123,14 @@ pd.set_option('display.max_colwidth', None)
 
 #Function definitions Start Here
 def main():
-
+    #defining child and parent
     csv_child = C1()
     csv_parent = P1()
+    #retriving headers through parent for config
     headers = csv_child.todict()
+    #create data frame
     df = csv_child.toDF("dict.csv", headers)
-
+    #print data
     print(headers)
     print(df)
 
@@ -143,7 +146,6 @@ def main():
     #search test with parent class
     user_input = input('Enter a string/number to search: ')
     search_test = csv_parent.search(user_input)
-
     #print the list vertical if the list is returned with data in it
     if search_test:
         for row in search_test:
@@ -152,6 +154,7 @@ def main():
     #
     
     #scatter plot test
+    print("Scatter Plot")
     user_input_column1 = input('please input the column you want x to be: ')
     user_input_column2 = input('please input the column you want y to be: ')
     user_input_title = input('please input the title of your graph: ')
@@ -159,6 +162,7 @@ def main():
     csv_child.scatter_plot(df, user_input_column1, user_input_column2, user_input_title)
 
     #violen plot test
+    print("Violin plot:")
     user_input_column1 = input('please input the column you want x to be: ')
     user_input_column2 = input('please input the column you want y to be: ')
     user_input_title = input('please input the title of your graph: ')
@@ -167,6 +171,7 @@ def main():
 
 
     #whisker box plot test
+    print("whisker box plot:")
     user_input = input('Enter the column names (comma-separated): ')
 
     # turns users input into a list
@@ -177,6 +182,7 @@ def main():
     csv_child.whisker_box_plot(df, columns_list, user_input_title)
     
     #histogram plot test
+    print("Histogram:")
     user_input_column1 = input('please input the column you want x to be: ')
     user_input_bin = input('please input the amount of bins that graph should have: ')
     user_input_title = input('please input the title of your graph: ')
@@ -185,6 +191,7 @@ def main():
 
 
     #line plot test
+    print("Line Plot")
     user_input_column1 = input('please input the column you want x to be: ')
     user_input_title = input('please input the title of your graph: ')
 
