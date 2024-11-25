@@ -98,7 +98,7 @@ class P1:
             plt.xlabel(column1)
             plt.ylabel('Frequency')
             plt.tight_layout()
-            plt.show()
+            plt.savefig('Output/histogram_plot.pdf')
         #
         except:
             print('error, make sure the columns you specified can be made into a histogram.')
@@ -115,8 +115,8 @@ class P1:
             plt.xlabel('Index')
             plt.ylabel(column1)  # Y-axis will be the values from the column
 
-            # Show the plot
-            plt.show()
+            # turns graph into pdf
+            plt.savefig('Output/line_plot.pdf')
         except:
             print('error, make sure the columns you specified can be made into a line plot.')
 
