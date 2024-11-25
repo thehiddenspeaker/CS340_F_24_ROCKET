@@ -73,7 +73,7 @@ class P1:
     def search(self, user_input):
         matching_rows = []  # List to store rows that match the user input
 
-        with open('dict.csv', 'r') as file:
+        with open('Input/dict.csv', 'r') as file:
             csv_file = csv.reader(file, delimiter=",")
 
             # Iterate through the rows in the CSV file

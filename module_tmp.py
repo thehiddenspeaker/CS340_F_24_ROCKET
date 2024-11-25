@@ -131,7 +131,7 @@ def main():
     print(headers)
     print(df)
 
-    
+
     #searh test with child class
     user_input = input('Enter a column name to search in:')
     input_search = input('Enter an integer or string to search for:')
