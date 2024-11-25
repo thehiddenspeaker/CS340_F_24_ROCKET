@@ -129,12 +129,12 @@ def main():
     #retriving headers through parent for config
     headers = csv_child.todict()
     #create data frame
-    df = csv_child.toDF("dict.csv", headers)
+    df = csv_child.toDF("Input/dict.csv", headers)
     #print data
     print(headers)
     print(df)
 
-
+    '''
     #searh test with child class
     user_input = input('Enter a column name to search in:')
     input_search = input('Enter an integer or string to search for:')
@@ -161,6 +161,8 @@ def main():
     
     csv_child.scatter_plot(df, user_input_column1, user_input_column2, user_input_title)
 
+
+    
     #violen plot test
     print("Violin plot:")
     user_input_column1 = input('please input the column you want x to be: ')
@@ -169,7 +171,8 @@ def main():
     
     csv_child.violin_plot(df, user_input_column1, user_input_column2, user_input_title)
 
-
+    
+    
     #whisker box plot test
     print("whisker box plot:")
     user_input = input('Enter the column names (comma-separated): ')
@@ -180,6 +183,8 @@ def main():
     user_input_title = input('please input the title of your graph: ')
 
     csv_child.whisker_box_plot(df, columns_list, user_input_title)
+
+    
     
     #histogram plot test
     print("Histogram:")
@@ -189,6 +194,7 @@ def main():
 
     csv_parent.histogram_plot(df, user_input_column1, user_input_bin, user_input_title)
 
+    '''
 
     #line plot test
     print("Line Plot")

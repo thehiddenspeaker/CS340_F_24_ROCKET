@@ -129,7 +129,7 @@ class C1(P1):
     def scatter_plot(self, dataframe, column1, column2, user_title):
         try:
             dataframe.plot.scatter(column1, column2, title= user_title)
-            plt.show()
+            plt.savefig('Output/scatter_plot.pdf')
         #
         except:
             print('error, make sure the column you gave only have number values.')
@@ -140,7 +140,7 @@ class C1(P1):
         try:
             sns.violinplot(dataframe, x=column1, y=column2)
             plt.title(user_title)
-            plt.show()
+            plt.savefig('Output/violin_plot.pdf')
         #
         except:
             print('error, make sure you gave one string column and one with numbers.')
@@ -153,7 +153,7 @@ class C1(P1):
         try:
             dataframe.boxplot(column1)
             plt.title(user_title)
-            plt.show()
+            plt.savefig('Output/whisker_box_plot.pdf')
         #
         except:
             print('error, make sure the columns you specified can be made into a box plot.')
