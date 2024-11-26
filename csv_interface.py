@@ -1,6 +1,6 @@
 #%% MODULE BEGINS
 
-module_name = 'csv_child'
+module_name = 'csv_interface'
 
 '''
 Version: 2
@@ -14,7 +14,7 @@ Authors:
     morgan montet 
 
 Date Created     :  11/19/2024
-Date Last Updated:  11/20/2024
+Date Last Updated:  11/26/2024
 
 Doc:
     <***>
