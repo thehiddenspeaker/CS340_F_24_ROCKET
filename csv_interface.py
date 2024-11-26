@@ -24,7 +24,7 @@ Notes:
 '''
 
 #%% IMPORTS                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from csv_parent import P1
+from csv_input import P1
 #custom imports
 
 from config import C_headers
