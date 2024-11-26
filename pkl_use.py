@@ -1,11 +1,11 @@
 #%% MODULE BEGINS
-module_name = 'pkl_read'
+module_name = 'pkl_use'
 
 '''
 Version: <***>
 
 Description:
-    <***>
+    use the pkl file for various functions
 
 Authors:
     <***>
@@ -21,13 +21,10 @@ Notes:
 '''
 
 #%% IMPORTS                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-if __name__ == "__main__":
-   import os
-   #os.chdir("./../..")
-#
+
 
 #custom imports
-
+import pkl_input
 
 #other imports
 from   copy       import deepcopy as dpcpy
@@ -60,10 +57,10 @@ import seaborn as sns
 
 
 #Class definitions Start Here
-class pkl_read:
+class pkl_use:
     pass
 
 
 #Function definitions Start Here
 
-#end of class pkl_read
+#end of class pkl_use
