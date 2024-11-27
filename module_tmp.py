@@ -96,9 +96,10 @@ def main():
 
     print(input_operator)
     print(csv_child.search_dataframe(df, input_search, input_operator, user_input))
-
+    '''
     #search test with parent class
     user_input = input('Enter a string/number to search: ')
+   # file_path = input('Enter the path of the csv file: ')
     search_test = csv_parent.search(user_input)
     #print the list vertical if the list is returned with data in it
     if search_test:
@@ -106,7 +107,7 @@ def main():
             print(row)
         #
     #
-    
+    '''
     #scatter plot test
     print("Scatter Plot")
     user_input_column1 = input('please input the column you want x to be: ')

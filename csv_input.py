@@ -2,7 +2,7 @@
 module_name = 'csv_input'
 
 '''
-Version: 3
+Version: 4
 
 Description:
     The parent class that read and interpret data from a csv file
@@ -26,6 +26,7 @@ Notes:
 
 #custom imports
 from config import C_headers
+from config import log
 
 #other imports
 
@@ -70,10 +71,11 @@ class P1:
       return empty_Dictionary
     #
 
-    def search(self, user_input):
+    def search(self, user_input, file_path ='Input/dict.csv'):
+        log.info("simple search start")
         matching_rows = []  # List to store rows that match the user input
 
-        with open('Input/dict.csv', 'r') as file:
+        with open(file_path, 'r') as file:
             csv_file = csv.reader(file, delimiter=",")
 
             # Iterate through the rows in the CSV file
@@ -89,9 +91,12 @@ class P1:
             #for row in csv_file ends
 
         # Return the list of matching rows (empty if none found)
+        log.info("simple search finished")
         return matching_rows
+    #search method end
 
     def histogram_plot(self, dataframe, column1, bin_number, user_title):
+        log.info("histogram start")
         try:
             dataframe.hist(column1,bins=int(bin_number), edgecolor='black')
             plt.title(user_title)
@@ -102,10 +107,13 @@ class P1:
         #
         except:
             print('error, make sure the columns you specified can be made into a histogram.')
+            log.error("histogram code crashed")
 
+    log.info('histogram end')
     #end of histogram plot
 
     def line_plot(self, dataframe, column1, user_title):
+        log.info("line plot start")
         try:
             # Create a line plot for the specified column
             dataframe[column1].plot(kind='line', figsize=(10, 6))
@@ -119,7 +127,8 @@ class P1:
             plt.savefig('Output/line_plot.pdf')
         except:
             print('error, make sure the columns you specified can be made into a line plot.')
-
+            log.error("line plot code crashed")
+    log.info("line plot finished")
     #end of line plot
 
 #end of class
