@@ -33,8 +33,8 @@ if __name__ == "__main__":
 #
 
 #custom imports
-from csv_parent import P1
-from csv_child import C1
+from csv_input import P1
+from csv_interface import C1
 
 #other imports
 from   copy       import deepcopy as dpcpy
