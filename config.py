@@ -21,4 +21,11 @@ Doc:
 Notes:
     <***>
 '''
+import logging as log
+
+log.basicConfig(filename="Output/log_file.log",
+                    format='%(asctime)s %(message)s',
+                    filemode='w', level=20)
+
+
 C_headers = ( 'id','elderseal','rarity','damageType','name','attack_display','attack_raw','element_type','element_damage','element_hidden')
