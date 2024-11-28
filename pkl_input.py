@@ -1,5 +1,5 @@
 #%% MODULE BEGINS
-module_name = 'pkl_read'
+module_name = 'pkl_input'
 
 '''
 Version: <***>
