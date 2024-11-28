@@ -5,7 +5,7 @@ module_name = 'pkl_use'
 Version: <***>
 
 Description:
-    use the pkl file for various functions
+    use the pkl file for various functions, child of pkl_input
 
 Authors:
     <***>

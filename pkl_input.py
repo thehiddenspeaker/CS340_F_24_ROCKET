@@ -5,7 +5,7 @@ module_name = 'pkl_input'
 Version: <***>
 
 Description:
-    <***>
+    place pkl file into data frame
 
 Authors:
     <***>
