@@ -79,7 +79,7 @@ def csv_print(name, data):
 
 class pkl_input:
 
-    def csv_print(name, data):
+    def csv_print(self, name, data):
         log.info('print start')
         try:
             file_name = f'{name}.csv'
