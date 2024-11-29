@@ -1,5 +1,5 @@
 #%% MODULE BEGINS
-module_name = 'pkl_read'
+module_name = 'pkl_input'
 
 '''
 Version: <***>
@@ -27,9 +27,10 @@ if __name__ == "__main__":
 #
 
 #custom imports
-
+from config import log
 
 #other imports
+import csv
 from   copy       import deepcopy as dpcpy
 
 '''
@@ -60,10 +61,42 @@ import seaborn as sns
 
 
 #Class definitions Start Here
-class pkl_read:
+def csv_print(name, data):
+    log.info('print start')
+    try:
+        file_name = f'{name}.csv'
+
+        with open(file_name, mode='w', newline='') as file:
+            writer = csv.writer(file)
+
+        for row in data:
+            writer.writerow(row)
+    except:
+        log.error("somthing went wrong int pkl_input print method")
+    #
+    log.info('print end')
+
+
+class pkl_input:
+
+    def csv_print(name, data):
+        log.info('print start')
+        try:
+            file_name = f'{name}.csv'
+
+            with open(file_name, mode='w', newline='') as file:
+                writer = csv.writer(file)
+
+            for row in data:
+                writer.writerow(row)
+        except:
+            log.error("somthing went wrong int pkl_input print method")
+        #
+        log.info('print end')
+    # print method end
     pass
 
 
 #Function definitions Start Here
 
-#end of class pkl_read
+#end of class pkl_input

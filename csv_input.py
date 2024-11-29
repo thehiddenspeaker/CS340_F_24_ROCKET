@@ -2,7 +2,7 @@
 module_name = 'csv_input'
 
 '''
-Version: 4
+Version: 5
 
 Description:
     The parent class that read and interpret data from a csv file
@@ -95,7 +95,7 @@ class P1:
         return matching_rows
     #search method end
 
-    def histogram_plot(self, dataframe, column1, bin_number, user_title):
+    def histogram_plot(self, dataframe, column1, bin_number, user_title, output='Output/histogram_plot.pdf'):
         log.info("histogram start")
         try:
             dataframe.hist(column1,bins=int(bin_number), edgecolor='black')
@@ -103,7 +103,7 @@ class P1:
             plt.xlabel(column1)
             plt.ylabel('Frequency')
             plt.tight_layout()
-            plt.savefig('Output/histogram_plot.pdf')
+            plt.savefig(output)
         #
         except:
             print('error, make sure the columns you specified can be made into a histogram.')
@@ -112,7 +112,7 @@ class P1:
     log.info('histogram end')
     #end of histogram plot
 
-    def line_plot(self, dataframe, column1, user_title):
+    def line_plot(self, dataframe, column1, user_title, output ='Output/line_plot.pdf' ):
         log.info("line plot start")
         try:
             # Create a line plot for the specified column
@@ -124,7 +124,7 @@ class P1:
             plt.ylabel(column1)  # Y-axis will be the values from the column
 
             # turns graph into pdf
-            plt.savefig('Output/line_plot.pdf')
+            plt.savefig(output)
         except:
             print('error, make sure the columns you specified can be made into a line plot.')
             log.error("line plot code crashed")
