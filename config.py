@@ -28,4 +28,5 @@ log.basicConfig(filename="Output/log_file.log",
                     filemode='w', level=20)
 
 
-C_headers = ( 'id','elderseal','rarity','damageType','name','attack_display','attack_raw','element_type','element_damage','element_hidden')
+C_headers = ( 'id','elderseal','rarity','damageType','name','attack_display',
+              'attack_raw','element_type','element_damage','element_hidden')
