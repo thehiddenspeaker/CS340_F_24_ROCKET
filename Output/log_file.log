@@ -1,36 +1,40 @@
-2024-11-30 06:51:01,725 histogram end
-2024-11-30 06:51:01,725 line plot finished
-2024-11-30 06:51:01,769 scatter plot finished
-2024-11-30 06:51:01,769 violin plot finished
-2024-11-30 06:51:01,769 whisker box plot finished
-2024-11-30 06:51:01,772 Main started
-2024-11-30 06:51:01,812 mean started
-2024-11-30 06:51:01,814 print start
-2024-11-30 06:51:01,814 print end
-2024-11-30 06:51:01,814 mean ended
-2024-11-30 06:51:01,814 median started
-2024-11-30 06:51:01,815 print start
-2024-11-30 06:51:01,815 print end
-2024-11-30 06:51:01,815 median ended
-2024-11-30 06:51:01,816 std started
-2024-11-30 06:51:01,816 print start
-2024-11-30 06:51:01,816 print end
-2024-11-30 06:51:01,816 std ended
-2024-11-30 06:51:01,816 joint count start
-2024-11-30 06:51:01,817 print start
-2024-11-30 06:51:01,817 print end
-2024-11-30 06:51:01,817 joint count finished
-2024-11-30 06:51:01,817 joint probability start
-2024-11-30 06:51:01,818 joint count start
-2024-11-30 06:51:01,818 joint count finished
-2024-11-30 06:51:01,818 print start
-2024-11-30 06:51:01,819 print end
-2024-11-30 06:51:01,819 joint probability ended
-2024-11-30 06:51:01,819 conditional probability start
-2024-11-30 06:51:01,830 joint probability start
-2024-11-30 06:51:01,830 joint count start
-2024-11-30 06:51:01,830 joint count finished
-2024-11-30 06:51:01,830 joint probability ended
-2024-11-30 06:51:01,830 print start
-2024-11-30 06:51:01,831 print end
-2024-11-30 06:51:01,831 conditional probability ended
+2024-11-30 15:44:34,401 histogram end
+2024-11-30 15:44:34,401 line plot finished
+2024-11-30 15:44:34,612 scatter plot finished
+2024-11-30 15:44:34,612 violin plot finished
+2024-11-30 15:44:34,612 whisker box plot finished
+2024-11-30 15:44:34,616 Main started
+2024-11-30 15:44:34,674 mean started
+2024-11-30 15:44:34,682 print start
+2024-11-30 15:44:34,682 print end
+2024-11-30 15:44:34,682 mean ended
+2024-11-30 15:44:34,682 median started
+2024-11-30 15:44:34,685 print start
+2024-11-30 15:44:34,685 print end
+2024-11-30 15:44:34,685 median ended
+2024-11-30 15:44:34,685 std started
+2024-11-30 15:44:34,686 print start
+2024-11-30 15:44:34,686 print end
+2024-11-30 15:44:34,686 std ended
+2024-11-30 15:44:34,686 joint count start
+2024-11-30 15:44:34,689 print start
+2024-11-30 15:44:34,689 print end
+2024-11-30 15:44:34,690 joint count finished
+2024-11-30 15:44:34,690 joint probability start
+2024-11-30 15:44:34,690 joint count start
+2024-11-30 15:44:34,691 joint count finished
+2024-11-30 15:44:34,691 print start
+2024-11-30 15:44:34,691 print end
+2024-11-30 15:44:34,691 joint probability ended
+2024-11-30 15:44:34,691 conditional probability start
+2024-11-30 15:44:34,708 joint probability start
+2024-11-30 15:44:34,708 joint count start
+2024-11-30 15:44:34,708 joint count finished
+2024-11-30 15:44:34,708 joint probability ended
+2024-11-30 15:44:34,709 print start
+2024-11-30 15:44:34,709 print end
+2024-11-30 15:44:34,709 conditional probability ended
+2024-11-30 15:44:34,709 unique start
+2024-11-30 15:44:34,709 print start
+2024-11-30 15:44:34,711 print end
+2024-11-30 15:44:34,711 unique ended
