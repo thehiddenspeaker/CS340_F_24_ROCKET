@@ -61,34 +61,20 @@ import seaborn as sns
 
 
 #Class definitions Start Here
-def csv_print(name, data):
-    log.info('print start')
-    try:
-        file_name = f'{name}.csv'
-
-        with open(file_name, mode='w', newline='') as file:
-            writer = csv.writer(file)
-
-        for row in data:
-            writer.writerow(row)
-    except:
-        log.error("somthing went wrong int pkl_input print method")
-    #
-    log.info('print end')
-
-
 class pkl_input:
 
-    def csv_print(self, name, data):
+    def csv_print(self, name, data, path = 'Output/'):
         log.info('print start')
         try:
-            file_name = f'{name}.csv'
+            file_name = f'{path}{name}.csv'
 
+            # Open the file in write mode
             with open(file_name, mode='w', newline='') as file:
                 writer = csv.writer(file)
 
-            for row in data:
-                writer.writerow(row)
+                # Write each item (assuming it's iterable) into the CSV file
+                for item in data:
+                    writer.writerow([item])
         except:
             log.error("somthing went wrong int pkl_input print method")
         #
