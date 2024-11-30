@@ -170,6 +170,7 @@ def main():
     pkl_child.joint_count(df, 'rarity')
     pkl_child.joint_probability(df, 'element_type')
     pkl_child.conditional_probability(df, 'rarity', 'attack_display')
+    pkl_child.unique(df, 'id')
 
     pass
 
