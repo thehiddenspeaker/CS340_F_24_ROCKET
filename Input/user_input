@@ -1,0 +1,39 @@
+Input/dict.csv
+attack_raw
+100
+>
+water
+attack_display
+element_damage
+display vs element damage
+element_type
+element_damage
+element type and damage
+attack_raw, element_damage,attack_display
+whisker plot
+rarity
+8
+histogram plot
+element_damage
+line plot
+rarity
+element_type
+rarity
+attack_display
+1
+1
+attack_raw
+attack_display
+Output/vectoroutput.csv
+position_vector
+position vector plot
+400
+1250
+unit_vector
+unit vector plot
+1
+1
+projection
+projection vector plot
+700
+800
