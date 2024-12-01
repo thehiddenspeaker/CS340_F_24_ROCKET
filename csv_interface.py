@@ -32,7 +32,6 @@ from config import log
 
 #other imports
 import csv
-import requests
 import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
@@ -107,7 +106,7 @@ class C1(P1):
     # Function to search and display the DataFrame
     def search_dataframe(self, df, search_term, comparison_operator=None, column=None):
         log.info("search dataframe start")
-        if column:
+        if column != None:
             # Filter the DataFrame to the selected column (which will be a Series)
             filtered_column = df[column]
 
@@ -122,7 +121,7 @@ class C1(P1):
 
             # Apply boolean indexing using .any(axis=1) to filter rows where any column matches the condition
             filtered_rows = df[boolean_mask.any(axis=1)]  # Boolean indexing for any match in a row
-        print(":", boolean_mask)
+
         log.info("search dataframe finished")
         return filtered_rows
 
@@ -130,10 +129,10 @@ class C1(P1):
 
 #end of class
 
-    def scatter_plot(self, dataframe, column1, column2, user_title, output ='Output/scatter_plot.pdf', **kwargs):
+    def scatter_plot(self, dataframe, column1, column2, user_title, output ='Output/scatter_plot.pdf'):
         log.info("scatter plot start")
         try:
-            dataframe.plot.scatter(column1, column2, title= user_title, **kwargs)
+            dataframe.plot.scatter(column1, column2, title= user_title)
             plt.savefig(output)
         #
         except:
@@ -143,10 +142,10 @@ class C1(P1):
     log.info("scatter plot finished")
     # end of scatter plot method
 
-    def violin_plot(self, dataframe, column1, column2, user_title, output ='Output/violin_plot.pdf', **kwargs):
+    def violin_plot(self, dataframe, column1, column2, user_title, output ='Output/violin_plot.pdf'):
         log.info("violin plot start")
         try:
-            sns.violinplot(data=dataframe, x=column1, y=column2, **kwargs)
+            sns.violinplot(dataframe, x=column1, y=column2)
             plt.title(user_title)
             plt.savefig(output)
         #
@@ -157,10 +156,11 @@ class C1(P1):
     log.info("violin plot finished")
     #end of violin plot method
 
-    def whisker_box_plot(self, dataframe, column1, user_title, output='Output/whisker_box_plot.pdf', **kwargs):
+    def whisker_box_plot(self, dataframe, column1, user_title, output='Output/whisker_box_plot.pdf'):
         log.info("whisker box plot start")
+        plt.clf()
         try:
-            dataframe.boxplot(column1, **kwargs)
+            dataframe.boxplot(column1)
             plt.title(user_title)
             plt.savefig(output)
         #

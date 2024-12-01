@@ -25,8 +25,6 @@ Notes:
 #%% IMPORTS                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import pandas as pd
 import numpy as np
-from itertools import combinations, permutations
-import itertools
 
 #custom imports
 from pkl_input import pkl_input
@@ -34,11 +32,12 @@ from config import log
 
 #other imports
 from   copy       import deepcopy as dpcpy
-
-'''
+import numpy  as np
 from   matplotlib import pyplot as plt
+'''
+
 import mne
-import numpy  as np 
+ 
 import os
 import seaborn as sns
 '''
@@ -63,13 +62,12 @@ import seaborn as sns
 
 #Class definitions Start Here
 class pkl_use(pkl_input):
-    pass
 
-    def __init__(self):
+	def __init__(self):
         super().__init__()
 
     #Function definitions Start Here
-    def mean(self, data_frame, user_axis = 0, file_name = 'mean'):
+    def mean(self, data_frame, user_axis = 0):
         log.info('mean started')
 
         # Check if the DataFrame is empty
@@ -100,7 +98,7 @@ class pkl_use(pkl_input):
                 mean_result = mean_result.tolist()
 
             # Print the mean result to CSV
-            super().csv_print(file_name, mean_result)
+            super().csv_print('mean', mean_result)
 
         except:
             log.error('mean method crashed')
@@ -108,7 +106,7 @@ class pkl_use(pkl_input):
         log.info('mean ended')
     # end of mean method
 
-    def median(self, data_frame, user_axis = 0, file_name= 'median'):
+    def median(self, data_frame, user_axis = 0):
         log.info('median started')
         try:
             # Filter out non-numeric columns
@@ -118,13 +116,13 @@ class pkl_use(pkl_input):
             median_result = numeric_data.median(axis=user_axis)
 
             # Print the result
-            super().csv_print(file_name, median_result)
+            super().csv_print('median', median_result)
         except:
             log.error('median method crashed')
         log.info('median ended')
     #end of median method
 
-    def standard_deviation(self, data_frame, user_axis = 0, file_name = 'std'):
+    def standard_deviation(self, data_frame, user_axis = 0):
         log.info('std started')
         try:
             # Filter out non-numeric columns
@@ -134,18 +132,18 @@ class pkl_use(pkl_input):
             standard_deviation_result = numeric_data.std(axis=user_axis)
 
             # Print the result
-            super().csv_print(file_name, standard_deviation_result)
+            super().csv_print('std', standard_deviation_result)
         except:
             log.error('std method crashed')
         log.info('std ended')
     # method end
 
-    def joint_count(self, data_frame, columns, write = True, file_name = 'joint_count'):
+    def joint_count(self, data_frame, columns, write = True):
         log.info('joint count start')
         try:
             joint_count_result = data_frame.groupby(columns).size()
             if write:
-                super().csv_print(file_name, joint_count_result)
+                super().csv_print('joint_count', joint_count_result)
             #
         except:
             log.error('joint count crashed')
@@ -153,7 +151,7 @@ class pkl_use(pkl_input):
         return joint_count_result
     # joint count method end
 
-    def joint_probability(self, data_frame, columns, write = True, file_name = 'joint_probability'):
+    def joint_probability(self, data_frame, columns, write = True):
         log.info('joint probability start')
         try:
             joint_count_result = self.joint_count(data_frame, columns, write=False)
@@ -162,7 +160,7 @@ class pkl_use(pkl_input):
             joint_probabilities = joint_count_result / total_rows
 
             if write:
-                super().csv_print(file_name, joint_probabilities)
+                super().csv_print('joint_probability', joint_probabilities)
             #
         except:
             log.error('joint probability crashed')
@@ -170,7 +168,7 @@ class pkl_use(pkl_input):
         return joint_probabilities
     #joint probability
 
-    def conditional_probability(self, df, columns_a, columns_b, file_name ='conditional_probabilities'):
+    def conditional_probability(self, df, columns_a, columns_b):
         log.info('conditional probability start')
         try:
             #getting the joint prob of the 2 colums
@@ -180,13 +178,67 @@ class pkl_use(pkl_input):
             marginal_prob_b = self.joint_probability(df, columns_b, write=False)
 
             conditional_probabilities = joint_prob / marginal_prob_b
-            super().csv_print(file_name, conditional_probabilities)
+            super().csv_print('conditional_probabilities', conditional_probabilities)
         except:
             log.error('conditional probability code crashed')
 
         log.info('conditional probability ended')
     # conditional probability
 
+    # Function to calculate the magnitude of a vector
+    def magnitude(self, vector):
+        return np.linalg.norm(vector)
+
+    # Function to calculate the unit vector
+    def unit_vector(self, vector):
+        return vector / self.magnitude(vector) if self.magnitude(vector) != 0 else np.zeros_like(vector)
+    #end unit_vector
+    # Function to calculate the projection of P onto Q
+    def projection(self,P, Q):
+        dot_product_PQ = np.dot(P, Q)
+        magnitude_Q_squared = np.dot(Q, Q)
+        return (dot_product_PQ / magnitude_Q_squared) * Q
+    #end projection vector
+    # Function to calculate the dot product of P and Q
+    def dot_product(self, P, Q):
+        return np.dot(P, Q)
+    #end dot_product
+    def create_plot(self, df, column, title, llimit, hlimit):
+        plt.figure(figsize=(10,5))
+        ax = plt.gca()
+        for i in range(len(df)):
+            # Get the vector components
+
+            vector = df[column][i]
+
+            # Plot the vector as an arrow
+            ax.quiver(0, 0, vector[0], vector[1], angles='xy', scale_units='xy', scale=1, color='b', width=0.005)
+
+        # Adjusting the plot to display the vectors nicely
+        plt.xlim(-1, llimit)
+        plt.ylim(-1, hlimit)
+        plt.axhline(0, color='black', linewidth=0.5)
+        plt.axvline(0, color='black', linewidth=0.5)
+        plt.grid(True)
+        plt.gca().set_aspect('equal', adjustable='box')
+
+        # Labels and title
+        plt.xlabel('attack_raw')
+        plt.ylabel('attack_display')
+        plt.title(title)
+
+        # Display the plot
+        plt.savefig('Output/'+title)
+    #end create_plot
+    def angle_between(self, P, Q):
+        cos_theta = np.dot(P, Q) / (self.magnitude(P) * self.magnitude(Q))
+        theta_rad = np.arccos(np.clip(cos_theta, -1.0, 1.0))  # Clip value to avoid numerical errors
+        return np.degrees(theta_rad)
+    # end of angle between
+    def is_orthogonal(self, P, Q):
+        return np.isclose(self.dot_product(P, Q), 0)
+    # end orthogonal
+    
     def unique(self, data_frame, columns, file_name = 'unique'):
         log.info('unique start')
         try:
