@@ -63,6 +63,8 @@ import seaborn as sns
 #Class definitions Start Here
 class pkl_use(pkl_input):
 
+	def __init__(self):
+        super().__init__()
 
     #Function definitions Start Here
     def mean(self, data_frame, user_axis = 0):
@@ -236,6 +238,50 @@ class pkl_use(pkl_input):
     def is_orthogonal(self, P, Q):
         return np.isclose(self.dot_product(P, Q), 0)
     # end orthogonal
+    
+    def unique(self, data_frame, columns, file_name = 'unique'):
+        log.info('unique start')
+        try:
+            res = list(set(data_frame[columns].unique()))
+            super().csv_print(file_name, res)
+        except:
+            log.error('unique method crashed')
+        log.info('unique ended')
 
+    def permute(self, data_frame, columns, output='permutations', r=2 ):
+        log.info('permutations start')
+        try:
+            # Get the unique values from the specified column
+            unique_values = data_frame[columns].unique()
+
+            # Generate permutations of length r and convert to a list
+            perm = list(itertools.permutations(unique_values, r))
+
+            # Convert numpy.int64 to plain int for all elements in the permutation tuple
+            perm = [tuple(int(x) for x in p) for p in perm]  # Convert each element in the tuple to int
+
+            # Print all permutations at once (or process them as needed)
+            super().csv_print(output, perm)  # Pass the entire list at once
+        except:
+            log.error('permutations crashed')
+        log.info('permutations ended')
+    #permutations
+
+    def combine(self, data_frame, columns, output='combinations', r=2):
+        log.info('combinations start')
+        try:
+            # Get the unique values from the specified column and convert them to plain Python types (e.g., int)
+            unique_values = data_frame[columns].unique()
+            unique_values = [int(value) for value in unique_values]  # Convert numpy.int64 to int
+
+            # Generate combinations of length r
+            comb = list(itertools.combinations(unique_values, r))
+
+            # Print all combinations at once (or process them as needed)
+            super().csv_print(output, comb)  # Pass the entire list at once
+        except:
+            log.error('combinations crashed')
+        log.info('combinations ended')
+    #combinations
 
 #end of class pkl_use

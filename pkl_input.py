@@ -63,6 +63,9 @@ import seaborn as sns
 #Class definitions Start Here
 class pkl_input:
 
+    def __init__(self):
+        pass
+
     def csv_print(self, name, data, path = 'Output/'):
         log.info('print start')
         try:
