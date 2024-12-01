@@ -25,6 +25,8 @@ Notes:
 #%% IMPORTS                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import pandas as pd
 import numpy as np
+from itertools import combinations, permutations
+import itertools
 
 #custom imports
 from pkl_input import pkl_input
@@ -63,6 +65,8 @@ import seaborn as sns
 class pkl_use(pkl_input):
     pass
 
+    def __init__(self):
+        super().__init__()
 
     #Function definitions Start Here
     def mean(self, data_frame, user_axis = 0, file_name = 'mean'):
@@ -191,29 +195,41 @@ class pkl_use(pkl_input):
         except:
             log.error('unique method crashed')
         log.info('unique ended')
-    '''''
-    # unique
-    def permutations(self, data_frame, columns, file_name ='permutations' ):
+
+    def permute(self, data_frame, columns, output='permutations', r=2 ):
         log.info('permutations start')
         try:
-            perm = permutations(data_frame[columns].unique())
-            #for i in list(perm):
-            super().csv_print(file_name, perm)
+            # Get the unique values from the specified column
+            unique_values = data_frame[columns].unique()
+
+            # Generate permutations of length r and convert to a list
+            perm = list(itertools.permutations(unique_values, r))
+
+            # Convert numpy.int64 to plain int for all elements in the permutation tuple
+            perm = [tuple(int(x) for x in p) for p in perm]  # Convert each element in the tuple to int
+
+            # Print all permutations at once (or process them as needed)
+            super().csv_print(output, perm)  # Pass the entire list at once
         except:
             log.error('permutations crashed')
         log.info('permutations ended')
+    #permutations
 
-    # permutations
-
-    def combinations(self, data_frame, columns, file_name = 'combinations'):
+    def combine(self, data_frame, columns, output='combinations', r=2):
         log.info('combinations start')
         try:
-            comb = combinations(data_frame[columns].unique())
-            for i in list(comb):
-                csv_print(file_name, i)
+            # Get the unique values from the specified column and convert them to plain Python types (e.g., int)
+            unique_values = data_frame[columns].unique()
+            unique_values = [int(value) for value in unique_values]  # Convert numpy.int64 to int
+
+            # Generate combinations of length r
+            comb = list(itertools.combinations(unique_values, r))
+
+            # Print all combinations at once (or process them as needed)
+            super().csv_print(output, comb)  # Pass the entire list at once
         except:
             log.error('combinations crashed')
         log.info('combinations ended')
-    # combinations
-    '''
+    #combinations
+
 #end of class pkl_use

@@ -171,6 +171,8 @@ def main():
     pkl_child.joint_probability(df, 'element_type')
     pkl_child.conditional_probability(df, 'rarity', 'attack_display')
     pkl_child.unique(df, 'id')
+    pkl_child.permute(df,'attack_display')
+    pkl_child.combine(df, 'attack_raw')
 
     pass
 

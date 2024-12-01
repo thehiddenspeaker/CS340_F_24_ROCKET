@@ -130,10 +130,10 @@ class C1(P1):
 
 #end of class
 
-    def scatter_plot(self, dataframe, column1, column2, user_title, output ='Output/scatter_plot.pdf'):
+    def scatter_plot(self, dataframe, column1, column2, user_title, output ='Output/scatter_plot.pdf', **kwargs):
         log.info("scatter plot start")
         try:
-            dataframe.plot.scatter(column1, column2, title= user_title)
+            dataframe.plot.scatter(column1, column2, title= user_title, **kwargs)
             plt.savefig(output)
         #
         except:
@@ -143,10 +143,10 @@ class C1(P1):
     log.info("scatter plot finished")
     # end of scatter plot method
 
-    def violin_plot(self, dataframe, column1, column2, user_title, output ='Output/violin_plot.pdf'):
+    def violin_plot(self, dataframe, column1, column2, user_title, output ='Output/violin_plot.pdf', **kwargs):
         log.info("violin plot start")
         try:
-            sns.violinplot(dataframe, x=column1, y=column2)
+            sns.violinplot(data=dataframe, x=column1, y=column2, **kwargs)
             plt.title(user_title)
             plt.savefig(output)
         #
@@ -157,10 +157,10 @@ class C1(P1):
     log.info("violin plot finished")
     #end of violin plot method
 
-    def whisker_box_plot(self, dataframe, column1, user_title, output='Output/whisker_box_plot.pdf'):
+    def whisker_box_plot(self, dataframe, column1, user_title, output='Output/whisker_box_plot.pdf', **kwargs):
         log.info("whisker box plot start")
         try:
-            dataframe.boxplot(column1)
+            dataframe.boxplot(column1, **kwargs)
             plt.title(user_title)
             plt.savefig(output)
         #
