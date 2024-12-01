@@ -32,7 +32,6 @@ from config import log
 
 import csv
 import sys
-import requests
 import pandas as pd
 from matplotlib import pyplot as plt
 
