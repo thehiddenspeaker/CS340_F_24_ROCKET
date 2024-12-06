@@ -1,4 +1,6 @@
 #%% MODULE BEGINS
+import pandas as pd
+
 module_name = 'pkl_input'
 
 '''
@@ -65,6 +67,11 @@ class pkl_input:
 
     def __init__(self):
         pass
+
+    def pickle_to_df(self, file_path= 'Input/data.pkl'):
+        df = pd.read_pickle(file_path)
+        return df
+    # pickle_to_df
 
     def csv_print(self, name, data, path = 'Output/'):
         log.info('print start')
