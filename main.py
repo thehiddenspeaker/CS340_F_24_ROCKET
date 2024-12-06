@@ -2,7 +2,7 @@
 module_name = 'main'
 
 '''
-Version: 3
+Version: 5
 
 Description:
     <***>
@@ -13,7 +13,7 @@ Authors:
     Morgan Montet
 
 Date Created     :  11/19/2024
-Date Last Updated:  11/20/2024
+Date Last Updated:  12/5/2024
 
 Doc:
     <***>
@@ -216,8 +216,10 @@ def main():
     #columns to read from
     row1 =file_input[position]
     position+=1
+
     row2=file_input[position]
     position+=1
+
     # Iterate over each row and calculate the vectors and dot product
     for index, row in df.iterrows():
         # Extract weapon attack (A_w) and elemental attack (A_e) from the DataFrame row
@@ -263,7 +265,7 @@ def main():
         'angle_with_Q': angles,
         'Orthogonality': orthogonality
     })
-    print(df_results)
+
     df_results.to_csv(file_input[position])
     position+=1
     pkl_child.create_plot(df_results, file_input[position], file_input[position+1], int(file_input[position+2]), int(file_input[position+3]))
@@ -272,8 +274,9 @@ def main():
     position+=4
     pkl_child.create_plot(df_results, file_input[position], file_input[position+1], int(file_input[position+2]), int(file_input[position+3]))
 
-
-
+    print(position)
+    print(row1)
+    print(row2)
 
     log.info("main finished")
     pass

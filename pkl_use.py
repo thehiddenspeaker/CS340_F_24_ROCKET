@@ -2,7 +2,7 @@
 module_name = 'pkl_use'
 
 '''
-Version: 3
+Version: 4
 
 Description:
     use the pkl file for various functions, child of pkl_input
@@ -13,7 +13,7 @@ Authors:
     Trent Law
 
 Date Created     :  11/26/2024
-Date Last Updated:  11/26/2024
+Date Last Updated:  12/5/2024
 
 Doc:
     <***>
@@ -25,7 +25,7 @@ Notes:
 #%% IMPORTS                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import pandas as pd
 import numpy as np
-
+import itertools
 #custom imports
 from pkl_input import pkl_input
 from config import log
@@ -63,10 +63,8 @@ import seaborn as sns
 #Class definitions Start Here
 class pkl_use(pkl_input):
 
-	def __init__(self):
-        super().__init__()
-
-    #Function definitions Start Here
+    def __init__(self):
+        pass
     def mean(self, data_frame, user_axis = 0):
         log.info('mean started')
 
