@@ -2,7 +2,7 @@
 module_name = 'pkl_use'
 
 '''
-Version: 4
+Version: 5
 
 Description:
     use the pkl file for various functions, child of pkl_input
@@ -13,7 +13,7 @@ Authors:
     Trent Law
 
 Date Created     :  11/26/2024
-Date Last Updated:  12/5/2024
+Date Last Updated:  12/6/2024
 
 Doc:
     <***>
@@ -284,5 +284,65 @@ class pkl_use(pkl_input):
             log.error('combinations crashed')
         log.info('combinations ended')
     #combinations
+    def vectorDF(self,df, col1, col2, Q):
+        position_vectors = []
+        magnitudes = []
+        unit_vectors = []
+        projections = []
+        dot_products = []
+        angles = []
+        orthogonality = []
 
+        # columns to read from
+        row1= col1
+
+        row2 = col2
+
+        # Iterate over each row and calculate the vectors and dot product
+        for index, row in df.iterrows():
+            # Extract weapon attack (A_w) and elemental attack (A_e) from the DataFrame row
+            A_w = row[row1]  # Weapon attack (x-component)
+            A_e = row[row2]  # Elemental attack (y-component)
+
+            # Define the position vector P
+            P = np.array([A_w, A_e])
+
+            # Calculate the magnitude of the position vector P
+            magnitude_P = self.magnitude(P)
+
+            # Calculate the unit vector of P
+            P_hat = self.unit_vector(P)
+
+            # Calculate the projection of P onto Q
+            proj_P_on_Q = self.projection(P, Q)
+
+            # Calculate the dot product of P and Q
+            dot_PQ = self.dot_product(P, Q)
+
+            orthogonal = self.is_orthogonal(P, Q)
+            # Calculate the angle between P and Q
+            angle_PQ = self.angle_between(P, Q)
+            # Append the results to the respective lists
+            position_vectors.append(P)
+            magnitudes.append(magnitude_P)
+            unit_vectors.append(P_hat)
+            projections.append(proj_P_on_Q)
+            dot_products.append(dot_PQ)
+            angles.append(angle_PQ)
+            orthogonality.append(orthogonal)
+
+        # Create a new DataFrame to store the results
+        df_results = pd.DataFrame({
+            'attack_raw': df['attack_raw'],
+            'attack_display': df['attack_display'],
+            'position_vector': position_vectors,
+            'magnitude': magnitudes,
+            'unit_vector': unit_vectors,
+            'projection': projections,
+            'dot_product': dot_products,
+            'angle_with_Q': angles,
+            'Orthogonality': orthogonality
+        })
+        return df_results
+    #
 #end of class pkl_use

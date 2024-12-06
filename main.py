@@ -2,7 +2,7 @@
 module_name = 'main'
 
 '''
-Version: 5
+Version: 6
 
 Description:
     <***>
@@ -13,7 +13,7 @@ Authors:
     Morgan Montet
 
 Date Created     :  11/19/2024
-Date Last Updated:  12/5/2024
+Date Last Updated:  12/6/2024
 
 Doc:
     <***>
@@ -187,7 +187,8 @@ def main():
 
 
     # pkl test
-
+    df = pkl_parent.pickle_to_df(file_path=file_input[position])
+    position += 1
     pkl_child.mean(df)
     pkl_child.median(df)
     pkl_child.standard_deviation(df)
@@ -204,14 +205,7 @@ def main():
     position+=2
 
 
-    # Lists to store the calculated values
-    position_vectors = []
-    magnitudes = []
-    unit_vectors = []
-    projections = []
-    dot_products = []
-    angles = []
-    orthogonality = []
+
 
     #columns to read from
     row1 =file_input[position]
@@ -220,51 +214,7 @@ def main():
     row2=file_input[position]
     position+=1
 
-    # Iterate over each row and calculate the vectors and dot product
-    for index, row in df.iterrows():
-        # Extract weapon attack (A_w) and elemental attack (A_e) from the DataFrame row
-        A_w = row[row1]  # Weapon attack (x-component)
-        A_e = row[row2]  # Elemental attack (y-component)
-
-        # Define the position vector P
-        P = np.array([A_w, A_e])
-
-        # Calculate the magnitude of the position vector P
-        magnitude_P = pkl_child.magnitude(P)
-
-        # Calculate the unit vector of P
-        P_hat = pkl_child.unit_vector(P)
-
-        # Calculate the projection of P onto Q
-        proj_P_on_Q = pkl_child.projection(P, Q)
-
-        # Calculate the dot product of P and Q
-        dot_PQ = pkl_child.dot_product(P, Q)
-
-        orthogonal = pkl_child.is_orthogonal(P, Q)
-        # Calculate the angle between P and Q
-        angle_PQ = pkl_child.angle_between(P, Q)
-        # Append the results to the respective lists
-        position_vectors.append(P)
-        magnitudes.append(magnitude_P)
-        unit_vectors.append(P_hat)
-        projections.append(proj_P_on_Q)
-        dot_products.append(dot_PQ)
-        angles.append(angle_PQ)
-        orthogonality.append(orthogonal)
-
-    # Create a new DataFrame to store the results
-    df_results = pd.DataFrame({
-        'attack_raw': df['attack_raw'],
-        'attack_display': df['attack_display'],
-        'position_vector': position_vectors,
-        'magnitude': magnitudes,
-        'unit_vector': unit_vectors,
-        'projection': projections,
-        'dot_product': dot_products,
-        'angle_with_Q': angles,
-        'Orthogonality': orthogonality
-    })
+    df_results = pkl_child.vectorDF(df, row1, row2, Q)
 
     df_results.to_csv(file_input[position])
     position+=1
