@@ -34,6 +34,7 @@ from config import log
 from   copy       import deepcopy as dpcpy
 import numpy  as np
 from   matplotlib import pyplot as plt
+import itertools
 '''
 
 import mne
@@ -64,7 +65,9 @@ import seaborn as sns
 class pkl_use(pkl_input):
 
     def __init__(self):
-        pass
+        super().__init__()
+
+    #Function definitions Start Here
     def mean(self, data_frame, user_axis = 0):
         log.info('mean started')
 
