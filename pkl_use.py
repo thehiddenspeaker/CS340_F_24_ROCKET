@@ -2,7 +2,7 @@
 module_name = 'pkl_use'
 
 '''
-Version: 3
+Version: 4
 
 Description:
     use the pkl file for various functions, child of pkl_input
@@ -13,7 +13,7 @@ Authors:
     Trent Law
 
 Date Created     :  11/26/2024
-Date Last Updated:  11/26/2024
+Date Last Updated:  12/5/2024
 
 Doc:
     <***>
@@ -25,7 +25,7 @@ Notes:
 #%% IMPORTS                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import pandas as pd
 import numpy as np
-
+import itertools
 #custom imports
 from pkl_input import pkl_input
 from config import log
