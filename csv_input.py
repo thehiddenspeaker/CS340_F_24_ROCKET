@@ -94,10 +94,10 @@ class P1:
         return matching_rows
     #search method end
 
-    def histogram_plot(self, dataframe, column1, bin_number, user_title, output='Output/histogram_plot.pdf'):
+    def histogram_plot(self, dataframe, column1, bin_number, user_title, output='Output/histogram_plot.pdf', **kwargs):
         log.info("histogram start")
         try:
-            dataframe.hist(column1,bins=int(bin_number), edgecolor='black')
+            dataframe.hist(column1,bins=int(bin_number), edgecolor='black', **kwargs)
             plt.title(user_title)
             plt.xlabel(column1)
             plt.ylabel('Frequency')
@@ -111,11 +111,11 @@ class P1:
     log.info('histogram end')
     #end of histogram plot
 
-    def line_plot(self, dataframe, column1, user_title, output ='Output/line_plot.pdf' ):
+    def line_plot(self, dataframe, column1, user_title, output ='Output/line_plot.pdf', **kwargs):
         log.info("line plot start")
         try:
             # Create a line plot for the specified column
-            dataframe[column1].plot(kind='line', figsize=(10, 6))
+            dataframe[column1].plot(kind='line', figsize=(10, 6), **kwargs)
 
             # Adding title and labels
             plt.title(user_title)

@@ -92,7 +92,24 @@ class pkl_input:
     # print method end
     pass
 
+    def string_eval(self, user_input):
+        log.info("string_eval started")
 
-#Function definitions Start Here
+        x = 10  # Outer variable to demonstrate 'nonlocal'
 
+        def nested_function():
+            nonlocal x
+            x = eval(user_input)
+            return x
+
+        try:
+            answer = nested_function()
+
+            self.csv_print('Eval()', [answer])
+
+        except Exception as e :
+            log.error(f"Eval failed: {e}")
+
+        log.info("string_eval ended")
+    #end of string_eval
 #end of class pkl_input

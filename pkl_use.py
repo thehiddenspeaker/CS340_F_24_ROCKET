@@ -64,12 +64,21 @@ import seaborn as sns
 #Class definitions Start Here
 class pkl_use(pkl_input):
 
+    __count__ = 0
+
     def __init__(self):
+        __count__ = +1
         super().__init__()
 
     #Function definitions Start Here
-    def mean(self, data_frame, user_axis = 0):
+    def mean(self, data_frame, user_axis = 0, *args):
         log.info('mean started')
+
+        # Check if any additional arguments were passed
+        if args:
+            log.info(f"Additional arguments received: {args}")
+        else:
+            log.info("No additional arguments received.")
 
         # Check if the DataFrame is empty
         if data_frame.empty:
