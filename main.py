@@ -223,10 +223,16 @@ def main():
     pkl_child.create_plot(df_results, file_input[position], file_input[position+1], int(file_input[position+2]), int(file_input[position+3]))
     position+=4
     pkl_child.create_plot(df_results, file_input[position], file_input[position+1], int(file_input[position+2]), int(file_input[position+3]))
+    position+=4
 
     print(position)
     print(row1)
     print(row2)
+
+    # Test string_eval method
+    user_input_string = file_input[position]  # The user input for the eval
+    position += 1
+    pkl_parent.string_eval(user_input_string)  # Call the string_eval method here
 
     log.info("main finished")
     pass
